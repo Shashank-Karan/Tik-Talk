@@ -1,7 +1,7 @@
 
-// update server_url before you deploy!
+
 const CONFIG = {
-    SERVER_URL: 'https://YOUR-APP-NAME.onrender.com', // change this!
+    SERVER_URL: 'https://tik-talk-c9rp.onrender.com', // change this!
     MAX_MESSAGE_LENGTH: 1000
 };
 
