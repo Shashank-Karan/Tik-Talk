@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tik Talk</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- header -->
+    <header class="header">
+      <div class="logo">
+        <img src="icons/icon48.png" alt="Logo" class="logo-img">
+        <span class="logo-text">Tik Talk</span>
+      </div>
+      <div class="header-right">
+        <div class="online-count">
+          <span class="pulse-dot"></span>
+          <span id="userCount">0</span> online
+        </div>
+      </div>
+    </header>
+
+    <!-- connection status -->
+    <div class="connection-bar" id="connectionBar">
+      <span class="status-icon">🔄</span>
+      <span id="connectionStatus">Connecting...</span>
+    </div>
+
+    <!-- room url -->
+    <div class="url-bar" id="urlBar">
+      <span class="url-icon">🔗</span>
+      <span class="url-text" id="currentUrl">Loading...</span>
+    </div>
+
+    <!-- message container -->
+    <div class="chat-container" id="chatContainer">
+      <div class="welcome-message" id="welcomeMessage">
+        <div class="welcome-icon">💬</div>
+        <h3>Welcome to Tik Talk!</h3>
+        <p>Chat with everyone viewing this page</p>
+      </div>
+    </div>
+
+    <!-- typing status -->
+    <div class="typing-indicator" id="typingIndicator">
+      <span class="typing-dots">
+        <span></span><span></span><span></span>
+      </span>
+      <span id="typingUser">Someone</span> is typing...
+    </div>
+
+    <!-- input area -->
+    <div class="input-area">
+      <!-- Message Input -->
+      <div class="message-input-container">
+        <textarea id="messageInput" placeholder="Type a message..." rows="1" maxlength="1000"></textarea>
+        <button class="send-btn" id="sendBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- socket client -->
+  <script src="socket.io.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>

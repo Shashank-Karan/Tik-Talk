@@ -1,0 +1,20 @@
+# stuff to ignore
+
+# node dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+
+# system files
+.DS_Store
+Thumbs.db
+
+# ide stuff
+.vscode/
+.idea/
+
+# env 
+.env
+.env.local
