@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Tik Talk",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "💬 Tik Talk - Real-time anonymous chat for any website!",
     "permissions": [
         "activeTab",
