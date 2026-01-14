@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const https = require('https');
 const { Server } = require('socket.io');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -267,7 +268,7 @@ io.on('connection', (socket) => {
 const SELF_URL = `https://${process.env.RENDER_EXTERNAL_HOSTNAME || 'localhost'}.onrender.com/health`;
 if (process.env.RENDER_EXTERNAL_HOSTNAME) {
   setInterval(() => {
-    http.get(SELF_URL, (res) => {
+    https.get(SELF_URL, (res) => {
       console.log(`keep-alive ping: ${res.statusCode}`);
     }).on('error', (err) => {
       console.error('ping error:', err.message);
